@@ -1,0 +1,208 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+html {
+	font-size: 62.5%;
+}
+body {
+	position: relative;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	min-height: 100vh;
+	font-family: 'Montserrat', sans-serif;
+	background-size: cover;
+	background-position: left;
+	background-image: url('../img/outdoor-big.jpg');
+}
+body:before {
+	content: ' ';
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.7);
+}
+.wrapper {
+	margin-right: 10em;
+	width: 500px;
+	background-color: #fff;
+	border: 3px solid #fff;
+	z-index: 100;
+}
+
+.logo-box {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: 5%;
+	left: 10%;
+	padding: 0.5em;
+	z-index: 1000;
+}
+
+.logo-lion {
+	height: 121px;
+	border-radius: 50%;
+	background-image: linear-gradient(315deg, rgb(107, 15, 26, 0.8) 0%, rgb(185, 19, 114, 0.3) 74%);
+}
+
+.logo-lion img {
+	position: relative;
+	width: 120px;
+	border-radius: 50%;
+	z-index: -100;
+}
+
+.title-text {
+	font-family: 'Dancing Script', cursive;
+}
+
+.logo-text {
+	margin: 0.5em;
+	font-size: 2.2rem;
+	color: #fff;
+}
+
+.logo-text p {
+	color: #ddd;
+}
+
+.top {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	height: 200px;
+	position: relative;
+}
+
+.top-text {
+	margin: 20px;
+	font-size: 1.6em;
+	color: #fff;
+	text-align: center;
+	z-index: 100;
+}
+
+.top:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	display: block;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+.card-img-top {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.top p {
+	margin-top: 0.5em;
+}
+.bottom {
+	position: relative;
+	padding: 3em 1em;
+	background-image: linear-gradient(315deg, #6b0f1a 0%, #b91372 74%);
+
+	z-index: 1000;
+}
+
+label {
+	display: block;
+	margin-bottom: 1em;
+	font-size: 2.2rem;
+}
+
+input,
+select {
+	margin-bottom: 1em;
+	padding: 0.8em 0.5em;
+	width: 100%;
+	border-radius: 5%;
+	border: 1px solid rgb(185, 185, 185);
+}
+
+.count-btn {
+	display: block;
+	margin: 1em auto;
+	padding: 0.8em 0.4em;
+	width: 40%;
+	font-size: 2.2rem;
+	border-radius: 0.5em;
+	color: #fff;
+	background-color: #00ba40;
+	border: none;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+.count:hover {
+	background-color: rgb(0, 168, 59);
+}
+
+.cost-info-box,
+.error-box {
+	display: flex;
+	justify-content: center;
+}
+
+.cost-info {
+	display: none;
+	position: absolute;
+	bottom: 0;
+	margin: 0.5em;
+	font-size: 2rem;
+	text-align: center;
+	color: #ddd;
+}
+
+.cost {
+	font-weight: bold;
+}
+
+.error {
+	position: absolute;
+	bottom: 0;
+	margin: 0.5em;
+	font-size: 1.8rem;
+	color: #ddd;
+	text-align: center;
+}
+
+/*media query*/
+@media (max-width: 1400px) {
+	.logo-box {
+		position: relative;
+		top: 0;
+		left: 0;
+		margin-bottom: 10em;
+	}
+	body {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+	}
+	.wrapper {
+		margin-right: 0;
+		margin-bottom: 4em;
+	}
+}
+
+@media (max-width: 576px) {
+	.wrapper {
+		width: 80%;
+	}
+}
